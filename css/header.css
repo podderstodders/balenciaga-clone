@@ -1,7 +1,9 @@
 
 .header {
-    position: relative;
+    position: sticky;
+    top: 0;
     min-width: 200px;
+    background-color: white;
     
 }
 
@@ -124,6 +126,9 @@
 
 .header input {
     width: 100%;
+    border-inline: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     outline: none;
     padding-left: 50px;
     height: 50px;
@@ -147,16 +152,15 @@
     width: 100%;
     background: white;
     text-align: center;
-    padding: 1.5em 0;
+    padding: 1em 0;
     font-size: 0.88rem;
-    border-bottom: 1px solid black;
     visibility: hidden;
     opacity: 0;
     transition: visibility 0.5s, opacity 0.5s linear;
 }
 
 .searchOption h2 {
-    margin: 1em 0;
+    margin: 0.75em 0;
 }
 
 .searchOption a[role=link] {
@@ -164,6 +168,7 @@
     text-decoration: none;
     color: inherit;
     margin: 0.5em 0;
+
     
 }
 
@@ -179,8 +184,65 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility 0.5s, opacity 0.5s linear;
+    cursor: pointer;
 }
 
 .header-movingwords {
+    display: none;
+    padding: 1em;
+    overflow: hidden;
+}
+
+.redBolder {
+    text-transform: uppercase;
+    color: red;
+}
+
+@keyframes move-words-left {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+
+  @keyframes move-words-right {
+    0% {
+      right: 100%;
+    }
+    100% {
+      right: -100%;
+    }
+  }
+
+
+/* .header-movingwords p#moveLeft{
+    position: relative;
+    animation: move-words-left 15s linear infinite;
+}
+
+.header-movingwords p#moveRight{
+    position: relative;
+    animation: move-words-right 15s linear infinite;
+} */
+
+
+.header-banner {
+    height: 110px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    display: grid;
+    place-items: center;
+    font-weight: 700; 
+    font-size: 1.3em;
+    
+}
+
+@media(min-width: 1025px) {
+    .header-movingwords {
+        display: unset;
+      
+    }
     
 }

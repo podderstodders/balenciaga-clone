@@ -1,0 +1,21 @@
+
+
+.app-row {
+ background-color: #ccc;
+
+}
+
+.image-row {
+    height: 30vh;
+    display: grid;
+    place-items: center;
+}
+
+.app-row.sticky-row {
+    position: sticky;
+    top: calc(48px + 50px);
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 1em 0.5em;
+}
