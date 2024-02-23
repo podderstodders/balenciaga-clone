@@ -1,0 +1,124 @@
+
+
+.footer {
+
+}
+
+
+.mobile-accordion {
+    overflow-y: hidden;
+   
+}
+
+.tab:first-child {
+    border-top: 1px solid black;
+}
+.tab {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid black;
+ 
+}
+.tab input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  .tab__content {
+    max-height: 0;
+    overflow: scroll;
+    transition: all 0.35s;
+  }
+  .tab input:checked ~ .tab__content {
+    max-height: 10rem;
+    padding: 0.5em;
+
+  }
+  .tab__label,
+  .tab__close {
+    display: flex;
+    color: black;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .tab__label {
+    justify-content: space-between;
+    padding: 1rem 0.5rem;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .tab__label::after {
+    content: "\276F";
+    text-align: center;
+    transform: rotate(180deg);
+    transition: all 0.35s;
+  }
+  .tab input:checked + .tab__label::after {
+    transform: rotate(90deg);
+  }
+  .tab__content {
+    font-size: 15px;
+  }
+  .tab__content p {
+    margin-bottom: 1em;
+    margin-right: 0.5em;
+    
+   
+  }
+  .tab input:not(:checked) + .tab__label:hover::after {
+    animation: bounce .5s;
+  }
+
+
+  @keyframes bounce {
+    25% {
+      transform: rotate(90deg) translate(.25rem);
+    }
+    75% {
+      transform: rotate(90deg) translate(-.25rem);
+    }
+  }
+
+.footer .tablet-footer {
+    display: none;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.footer .center-logo {
+    text-align: center;
+    font-weight: 400;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5em 0;
+}
+
+@media(min-width: 1025px){
+
+    .mobile-accordion {
+        display: none;
+    }
+    .footer .tablet-footer {
+        display: grid;
+    }
+
+    .footer .center-logo {
+        border-top: 1px solid black;
+    }
+}
+
+.tablet-col {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
+    padding: 1em 0.7em;
+}
+
+.tablet-col ul[role=list] {
+    padding-left: 0;
+    list-style: none;
+    margin-top: 0.5em;
+    font-size: 0.76rem;
+}
+
+
+.tablet-col h5 {
+    text-transform: uppercase;
+    font-weight: 400;
+}
