@@ -4,7 +4,7 @@
     top: 0;
     min-width: 200px;
     background-color: white;
-    
+    z-index: 2;
 }
 
 .header-top {
@@ -128,7 +128,7 @@
     width: 100%;
     border-inline: none;
     border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-bottom: 0.5px solid black;
     outline: none;
     padding-left: 50px;
     height: 50px;
@@ -157,6 +157,7 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility 0.5s, opacity 0.5s linear;
+    border-bottom: 1px solid black;
 }
 
 .searchOption h2 {

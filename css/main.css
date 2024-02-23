@@ -18,4 +18,28 @@
     justify-content: space-between;
     background-color: white;
     padding: 1em 0.5em;
+    border-bottom: 1px solid black;
+}
+
+/* product rows */
+
+.app-row.products-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.product-item {
+    height: 400px;
+}
+
+@media(min-width: 768px){
+    .app-row.products-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(min-width: 1440px){
+    .app-row.products-row {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
