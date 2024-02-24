@@ -190,8 +190,8 @@
 
 .header-movingwords {
     display: none;
-    padding: 1em;
     overflow: hidden;
+    padding: 1em 0;
 }
 
 .redBolder {
