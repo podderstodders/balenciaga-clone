@@ -38,6 +38,11 @@
     padding: 2em;
 }
 
+.product-item a[role=link] {
+    text-decoration: none;
+    color: inherit;
+}
+
 .product-item .item-image{
     height: 600px;
     background-color: rgba(0, 0, 0, 0.4);
