@@ -218,7 +218,7 @@
   }
 
 
-/* .header-movingwords p#moveLeft{
+.header-movingwords p#moveLeft{
     position: relative;
     animation: move-words-left 15s linear infinite;
 }
@@ -226,7 +226,7 @@
 .header-movingwords p#moveRight{
     position: relative;
     animation: move-words-right 15s linear infinite;
-} */
+}
 
 
 .header-banner {
