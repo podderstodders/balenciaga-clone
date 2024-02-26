@@ -1,70 +1,67 @@
 
 
-.footer {
-
-}
 
 
-.mobile-accordion {
+.footer-accordion {
     overflow-y: hidden;
    
 }
 
-.tab:first-child {
+.footer-accordion .tab:first-child {
     border-top: 1px solid black;
 }
-.tab {
+.footer-accordion .tab {
     background-color: rgba(0, 0, 0, 0.5);
     border-bottom: 1px solid black;
  
 }
-.tab input {
+.footer-accordion .tab input {
     position: absolute;
     opacity: 0;
     z-index: -1;
   }
-  .tab__content {
+  .footer-accordion  .tab__content {
     max-height: 0;
     overflow: scroll;
     transition: all 0.35s;
   }
-  .tab input:checked ~ .tab__content {
+  .footer-accordion  .tab input:checked ~ .tab__content {
     max-height: 10rem;
     padding: 0.5em;
 
   }
-  .tab__label,
-  .tab__close {
+  .footer-accordion  .tab__label,
+  .footer-accordion  .tab__close {
     display: flex;
     color: black;
     text-transform: uppercase;
     cursor: pointer;
   }
-  .tab__label {
+  .footer-accordion  .tab__label {
     justify-content: space-between;
     padding: 1rem 0.5rem;
     font-weight: 400;
     font-size: 14px;
   }
-  .tab__label::after {
+  .footer-accordion  .tab__label::after {
     content: "\276F";
     text-align: center;
     transform: rotate(180deg);
     transition: all 0.35s;
   }
-  .tab input:checked + .tab__label::after {
+  .footer-accordion  .tab input:checked + .tab__label::after {
     transform: rotate(90deg);
   }
-  .tab__content {
+  .footer-accordion  .tab__content {
     font-size: 15px;
   }
-  .tab__content p {
+  .footer-accordion  .tab__content p {
     margin-bottom: 1em;
     margin-right: 0.5em;
     
    
   }
-  .tab input:not(:checked) + .tab__label:hover::after {
+  .footer-accordion .tab input:not(:checked) + .tab__label:hover::after {
     animation: bounce .5s;
   }
 
@@ -92,7 +89,7 @@
 
 @media(min-width: 1025px){
 
-    .mobile-accordion {
+    .footer-accordion {
         display: none;
     }
     .footer .tablet-footer {
